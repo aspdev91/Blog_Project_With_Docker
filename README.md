@@ -2,11 +2,11 @@
 
 Loading Blog Server with Docker
 
-https://drive.google.com/file/d/0B9VF88FS5k8MalkwZ2pDaklfNmM/view?usp=sharing
+https://drive.google.com/open?id=0B9VF88FS5k8MZVhBcjc1bkRvcW8
 
 REST API Documentation
 
-https://drive.google.com/file/d/0B9VF88FS5k8MZVhBcjc1bkRvcW8/view?usp=sharing
+https://drive.google.com/open?id=0B9VF88FS5k8MalkwZ2pDaklfNmM
 
 Blog Project Docker Image
 
