@@ -28,7 +28,6 @@ describe('http requests on routes', function () {
             .set('Accept', 'application/json')
             .send({
                 'email': 'test@gmail.com',
-                'username': "tester",
                 'password': "testing123456"
             })
     })

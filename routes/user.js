@@ -1,7 +1,7 @@
 'use strict'
 
-var _ = require('underscore')
-var Promise = require('bluebird')
+const _ = require('underscore')
+const Promise = require('bluebird')
 const express = require('express')
 const router = express.Router()
 const User = require('../models').User
@@ -51,7 +51,7 @@ router.post('/login', function (req, res, next) {
         })
     }
 
-    var user = User.findOne({
+    let user = User.findOne({
         where: {
             email: req.body.email
         },
@@ -60,7 +60,7 @@ router.post('/login', function (req, res, next) {
         }
     })
 
-    var passwordMatch = user.then(function (userResult) {
+    let passwordMatch = user.then(function (userResult) {
         if (!userResult) {
             return res.sendStatus(401)
         }

@@ -15,7 +15,7 @@ describe('Blog Model', function () {
     describe('Validations', function () {
 
         it('errors without title', function () {
-            var blog = Blog.build({});
+            let blog = Blog.build({});
             return blog
                 .validate()
                 .then(function (err) {
@@ -25,7 +25,7 @@ describe('Blog Model', function () {
         });
 
         it('errors without content', function () {
-            var blog = Blog.build({});
+            let blog = Blog.build({});
             return blog
                 .validate()
                 .then(function (err) {
@@ -39,7 +39,7 @@ describe('Blog Model', function () {
 
         it('it sets urlTitle based on title before validating', function () {
 
-            var blog = Blog.build({
+            let blog = Blog.build({
                 title: 'Test',
                 content: 'TestContent'
             });

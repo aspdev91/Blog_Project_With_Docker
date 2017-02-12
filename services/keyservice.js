@@ -27,18 +27,18 @@ KeyService.prototype.get = function(sessionKey) {
 
 // Generate and store a new JWT user key
 KeyService.prototype.set = function(user) {
-  var userKey = uuid.v4()
-  var issuedAt = new Date().getTime()
+  let userKey = uuid.v4()
+  let issuedAt = new Date().getTime()
 
-  var expiresAt = issuedAt + (KEY_SERVICE_EXPIRES_SECONDS * 1000)
+  let expiresAt = issuedAt + (KEY_SERVICE_EXPIRES_SECONDS * 1000)
 
-  var token = JWT.generate(user, userKey, issuedAt, expiresAt)
-  var key = sessionKey(user.id, issuedAt)
+  let token = JWT.generate(user, userKey, issuedAt, expiresAt)
+  let key = sessionKey(user.id, issuedAt)
 
-  var setKey = this.client.setAsync(key, userKey)
-  var setExpiration = setKey.then(this.client.expireAsync(key,
+  let setKey = this.client.setAsync(key, userKey)
+  let setExpiration = setKey.then(this.client.expireAsync(key,
                                   KEY_SERVICE_EXPIRES_SECONDS))
-  var getToken = setExpiration.then(function() {
+  let getToken = setExpiration.then(function() {
     return token
   })
 

@@ -18,11 +18,6 @@ var User = db.define('user', {
             isEmail: true
         }
     },
-    username: {
-        type: Sequelize.STRING,
-        allownull: false,
-        unique: true
-    },
     password: {
         type: Sequelize.STRING,
         set: function (plaintext) {

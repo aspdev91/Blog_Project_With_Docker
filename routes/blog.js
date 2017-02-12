@@ -10,7 +10,8 @@ module.exports = router
 
 // Get /blog
 router.get('/', (req, res, next) => {
-    Blog.findAll()
+
+    Blog.findAll({ limit: 10 })
         .then(function (blogs) {
             res.json(blogs)
         })
